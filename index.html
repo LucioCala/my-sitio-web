@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Mensaje de Fe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -11,50 +15,81 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, #1e3c72, #0f2027);
+            font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
+            overflow: hidden;
+        }
+
+        /* Fondo decorativo animado */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            filter: blur(100px);
         }
 
         .container {
-            padding: 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            max-width: 600px;
+            position: relative;
+            padding: 50px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            max-width: 650px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.6);
         }
 
         p {
-            font-size: 1.3rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
         }
 
         .versiculo {
-            margin-top: 20px;
+            margin-top: 30px;
             font-style: italic;
-            opacity: 0.8;
+            font-size: 1.3rem;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255,215,0,0.7);
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Confía en el Señor</h1>
+        <h1>✨ Confía en el Señor ✨</h1>
+
         <p>
             Cuando sientas que todo se derrumba, recuerda que el Señor es tu fuerza.
             Él nunca abandona a quienes caminan con fe.
         </p>
+
         <div class="versiculo">
-            "Todo lo puedo en Aquel que me fortalece."
+            “Todo lo puedo en Aquel que me fortalece.”
         </div>
     </div>
 
 </body>
 </html>
+         
